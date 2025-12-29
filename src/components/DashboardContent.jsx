@@ -79,12 +79,12 @@ const DashboardContent = () => {
 
     return (
         <div className="bg-[#f8fdff] min-h-screen font-sans">
-            {/* Oferta Modal */}
+            {/* Yangilangan Oferta Modal */}
             {showOfferModal && (
                 <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
                     <div className="absolute inset-0 bg-[#00BCE4]/20 backdrop-blur-sm" onClick={handleRejectOffer} />
 
-                    <div className="relative bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] flex flex-col overflow-hidden animate-scaleIn border border-[#00BCE4]/20">
+                    <div className="relative bg-white rounded-3xl shadow-2xl max-w-5xl w-full max-h-[90vh] flex flex-col overflow-hidden animate-scaleIn border border-[#00BCE4]/20">
                         {/* Header */}
                         <div className="p-8 bg-gradient-to-r from-[#00BCE4] to-[#0096b8] text-white">
                             <div className="flex items-center gap-4">
@@ -92,8 +92,8 @@ const DashboardContent = () => {
                                     <ShieldCheck size={40} />
                                 </div>
                                 <div>
-                                    <h2 className="text-2xl font-bold uppercase tracking-tight">🦷 Dentago Platformasi</h2>
-                                    <p className="text-sm opacity-90 mt-1">Zubtexniklar uchun ommaviy oferta shartnomasi</p>
+                                    <h2 className="text-2xl font-bold uppercase tracking-tight">🦷 DENTAGO PLATFORMASI UCHUN USTALAR AFERTASI</h2>
+                                    <p className="text-sm opacity-90 mt-1">(Boyitilgan kengaytirilgan rasmiy versiya)</p>
                                 </div>
                             </div>
                         </div>
@@ -101,30 +101,158 @@ const DashboardContent = () => {
                         {/* Scrollable Content */}
                         <div className="flex-1 overflow-y-auto p-8 space-y-6 text-slate-700">
                             <div className="bg-[#e6f8fc] rounded-2xl p-6 border border-[#00BCE4]/30">
-                                <p className="text-md leading-relaxed">
-                                    Ushbu ommaviy oferta Dentago platformasi va Platformada ro‘yxatdan o‘tgan zubtexnik o‘rtasida tuziladi.
-                                </p>
-                                <p className="mt-4 text-[#00BCE4] font-bold">
-                                    Xizmatlardan foydalanish orqali siz shartlarni to‘liq qabul qilgan hisoblanasiz.
+                                <p className="text-md leading-relaxed font-semibold">
+                                    Ushbu Oferta Dentago platformasi (keyingi o'rinlarda — "Platforma") tomonidan Ustalar (keyingi o'rinlarda — "Usta")ga taqdim etiladigan xizmatlar va o'zaro huquqiy munosabatlarni tartibga soladi. Usta platformada ro'yxatdan o'tishi, tasdiqlashi yoki xizmatdan foydalanishni boshlashi orqali ushbu Ofertadagi barcha shartlarni to'liq va so'zsiz qabul qilgan hisoblanadi.
                                 </p>
                             </div>
 
-                            <div className="space-y-6">
+                            <div className="space-y-8">
                                 <section>
-                                    <h3 className="text-lg font-bold text-[#00BCE4] mb-3 uppercase">1. Umumiy qoidalar</h3>
-                                    <ol className="space-y-2 list-decimal list-inside ml-2">
-                                        <li>Dentago — stomatologlar va zubtexniklar o‘rtasidagi raqamli platforma.</li>
-                                        <li>Abonent to‘lovi: <span className="font-bold">200 000 so‘m/oy.</span></li>
+                                    <h3 className="text-lg font-bold text-[#00BCE4] mb-4 uppercase flex items-center gap-2">
+                                        <span className="bg-[#00BCE4] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">1</span>
+                                        Umumiy qoidalar
+                                    </h3>
+                                    <ol className="space-y-3 ml-10">
+                                        <li className="flex gap-2">
+                                            <span className="font-bold min-w-[20px]">1.1.</span>
+                                            <span>Dentago — stomatologlar, zubtexniklar, ustalar va boshqa xizmat ko'rsatuvchi mutaxassislarni yagona tizimda bog'laydigan elektron platformadir.</span>
+                                        </li>
+                                        <li className="flex gap-2">
+                                            <span className="font-bold min-w-[20px]">1.2.</span>
+                                            <span>Platforma buyurtmalarni taqsimlash, ularni qulay boshqarish, texnik topshiriqlarni olish va xizmat ko'rsatuvchilar bilan mijozlar o'rtasidagi ishlash jarayonini soddalashtirish uchun mo'ljallangan.</span>
+                                        </li>
+                                        <li className="flex gap-2">
+                                            <span className="font-bold min-w-[20px]">1.3.</span>
+                                            <span>Usta platformadan faqat o'z nomidan foydalanadi va o'z faoliyati uchun mustaqil ravishda javobgar hisoblanadi.</span>
+                                        </li>
                                     </ol>
+                                </section>
+
+                                <section>
+                                    <h3 className="text-lg font-bold text-[#00BCE4] mb-4 uppercase flex items-center gap-2">
+                                        <span className="bg-[#00BCE4] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">2</span>
+                                        Xizmatlar tavsifi
+                                    </h3>
+                                    <div className="ml-10">
+                                        <p className="font-bold mb-3">2.1. Platforma Ustaga quyidagi imkoniyatlarni taqdim etadi:</p>
+                                        <ul className="space-y-2 text-sm ml-4">
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-[#00BCE4] mt-1">•</span>
+                                                <span>Buyurtmalarni ko'rish va ularga ariza qoldirish</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-[#00BCE4] mt-1">•</span>
+                                                <span>Buyurtmachilar bilan tezkor aloqa qilish</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-[#00BCE4] mt-1">•</span>
+                                                <span>O'z xizmat narxlarini o'rnatish</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-[#00BCE4] mt-1">•</span>
+                                                <span>Profil yuritish (portfel, ish namunalarini joylash)</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-[#00BCE4] mt-1">•</span>
+                                                <span>Reyting tizimi va mijoz sharhlarini ko'rish</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-[#00BCE4] mt-1">•</span>
+                                                <span>Buyurtma tarixini kuzatish</span>
+                                            </li>
+                                        </ul>
+                                        <p className="mt-4 text-sm">2.2. Platforma buyurtmalar sifatini nazorat qilmaydi, faqat vositachi elektron xizmat ko'rsatuvchi tizim hisoblanadi.</p>
+                                    </div>
+                                </section>
+
+                                <section className="bg-gradient-to-r from-[#00BCE4]/10 to-blue-50 rounded-2xl p-6 border border-[#00BCE4]/20">
+                                    <h3 className="text-lg font-bold text-[#00BCE4] mb-4 uppercase flex items-center gap-2">
+                                        <span className="bg-[#00BCE4] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">3</span>
+                                        Ustalar uchun tarif va to'lov shartlari
+                                    </h3>
+                                    <div className="ml-10 space-y-3">
+                                        <div className="flex items-center justify-between bg-white p-4 rounded-xl">
+                                            <span className="font-bold">3.1. Oylik obuna to'lovi:</span>
+                                            <span className="text-2xl font-black text-[#00BCE4]">200 000 so'm</span>
+                                        </div>
+                                        <p className="text-sm">3.2. To'lov har oyning boshi yoki xizmatdan foydalanishni davom ettirish sanasidan oldin amalga oshiriladi.</p>
+                                        <p className="text-sm">3.3. To'lov amalga oshirilgandan keyin Ustaga barcha funksiyalar ochiladi.</p>
+                                        <p className="text-sm">3.4. To'langan summalar qaytarilmaydi.</p>
+                                        <p className="text-sm">3.5. Agar Usta to'lovni o'z vaqtida amalga oshirmasa, funksiyalar vaqtincha cheklanadi.</p>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <h3 className="text-lg font-bold text-[#00BCE4] mb-4 uppercase flex items-center gap-2">
+                                        <span className="bg-[#00BCE4] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">4</span>
+                                        Ustaning huquqlari
+                                    </h3>
+                                    <div className="ml-10 bg-green-50 p-4 rounded-xl">
+                                        <p className="font-bold mb-2 text-sm">Usta quyidagi huquqlarga ega:</p>
+                                        <ul className="space-y-2 text-sm ml-4">
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-green-600 mt-1">✓</span>
+                                                <span>Platformadagi barcha mavjud buyurtmalarga murojaat qilish</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-green-600 mt-1">✓</span>
+                                                <span>Texnik talablar asosida ish narxini mustaqil belgilash</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-green-600 mt-1">✓</span>
+                                                <span>Buyurtmachidan qo'shimcha ma'lumotlar talab qilish</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-green-600 mt-1">✓</span>
+                                                <span>Profilni rivojlantirish, ish namunalarini qo'shish</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-green-600 mt-1">✓</span>
+                                                <span>Platforma texnik xizmatidan yordam olish</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <h3 className="text-lg font-bold text-[#00BCE4] mb-4 uppercase flex items-center gap-2">
+                                        <span className="bg-[#00BCE4] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">5</span>
+                                        Ustaning majburiyatlari
+                                    </h3>
+                                    <div className="ml-10 bg-yellow-50 p-4 rounded-xl">
+                                        <p className="font-bold mb-2 text-sm">Usta quyidagilarni bajarishi shart:</p>
+                                        <ul className="space-y-2 text-sm ml-4">
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-yellow-600 mt-1">•</span>
+                                                <span>Buyurtmalarni belgilangan muddat va sifatga muvofiq bajarish</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-yellow-600 mt-1">•</span>
+                                                <span>Buyurtmachilar bilan muloqotda odob-axloq me'yorlariga amal qilish</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-yellow-600 mt-1">•</span>
+                                                <span>Ish jarayonida noto'g'ri yoki soxta ma'lumot bermaslik</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-yellow-600 mt-1">•</span>
+                                                <span>Platforma qoidalari va algoritmlariga rioya qilish</span>
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-yellow-600 mt-1">•</span>
+                                                <span>Oylik obuna to'lovini vaqtida amalga oshirish</span>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </section>
 
                                 <section className="bg-red-50 rounded-2xl p-6 border border-red-200">
                                     <div className="flex items-center gap-3 mb-4">
                                         <AlertTriangle className="w-6 h-6 text-red-600" />
-                                        <h3 className="text-lg font-bold text-red-800 uppercase">Jarima choralari</h3>
+                                        <h3 className="text-lg font-bold text-red-800 uppercase">Muhim eslatma</h3>
                                     </div>
                                     <p className="text-sm text-red-700">
-                                        Buyurtmani asossiz bajarmaslik holatida Platformaga to‘langan summaning <span className="font-black">10 baravari</span> miqdorida jarima qo‘llanilishi mumkin.
+                                        Ushbu ofertani qabul qilish orqali siz barcha shartlar bilan tanishib, ularga roziligingizni bildirasiz. Har qanday nizoli holatlarda birinchi navbatda muhokama orqali hal qilish tavsiya etiladi.
                                     </p>
                                 </section>
                             </div>
@@ -134,22 +262,22 @@ const DashboardContent = () => {
                         <div className="p-6 border-t border-slate-100 bg-slate-50 flex flex-col sm:flex-row gap-4">
                             <button
                                 onClick={handleRejectOffer}
-                                className="flex-1 py-4 px-8 text-slate-500 font-bold rounded-2xl border border-slate-200 hover:bg-white transition-all"
+                                className="flex-1 py-4 px-8 text-slate-500 font-bold rounded-2xl border border-slate-200 hover:bg-white transition-all hover:border-red-300 hover:text-red-500"
                             >
-                                Bekor qilish
+                                Rad etish va chiqish
                             </button>
                             <button
                                 onClick={handleAcceptOffer}
-                                className="flex-[2] py-4 px-8 bg-[#00BCE4] hover:bg-[#0096b8] text-white font-bold rounded-2xl shadow-lg shadow-[#00BCE4]/30 transition-all hover:scale-[1.01]"
+                                className="flex-[2] py-4 px-8 bg-gradient-to-r from-[#00BCE4] to-[#0096b8] hover:from-[#0096b8] hover:to-[#0082a0] text-white font-bold rounded-2xl shadow-lg shadow-[#00BCE4]/30 transition-all hover:scale-[1.01] hover:shadow-xl"
                             >
-                                Roziman va davom etish
+                                ✅ Barcha shartlarni qabul qilaman va davom etish
                             </button>
                         </div>
                     </div>
                 </div>
             )}
 
-            {/* Asosiy Dashboard */}
+            {/* Qolgan dashboard kodi o'zgarishsiz qoladi */}
             <div className="p-4 md:p-8 space-y-6">
                 {/* Top Stats */}
                 <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
