@@ -8,7 +8,7 @@ import {
 import { BsInstagram, BsTelegram } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
 import { useData } from '../../context/DataProvider';
-
+import Logo from '../../assets/dentago.png';
 const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
     const location = useLocation();
     const { t } = useData();
@@ -107,22 +107,19 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
                 md:translate-x-0 md:static md:h-screen
             `}>
 
-                <div className="flex-1 flex flex-col min-h-0">
+                <div className="flex-1 flex flex-col relative min-h-0">
                     {/* Brand Identity */}
                     <div className="p-8 pb-6 flex items-center justify-between">
                         <Link to="/" className="flex items-center gap-3 group">
-                            <div className="w-11 h-11 bg-[#00BCE4] rounded-[1.25rem] flex items-center justify-center shadow-xl shadow-[#00BCE4] group-hover:rotate-6 transition-transform">
-                                <span className="text-white text-2xl font-black tracking-tighter italic">D</span>
-                            </div>
-                            <span className="text-2xl font-black text-slate-800 tracking-tighter uppercase italic">DentaGo</span>
+                            <img className='h-[150px] mt-[-73px]' src={Logo} alt="" />
                         </Link>
-                        <button onClick={() => setIsSidebarOpen(false)} className="md:hidden p-2 text-slate-400">
+                        <button onClick={() => setIsSidebarOpen(false)} className="md:hidden absolute top-4 left-2 p-2 text-slate-400">
                             <ArrowLeft size={20} />
                         </button>
                     </div>
 
                     {/* Quick Action Button */}
-                    <div className="px-6 mb-8">
+                    <div className="px-6 mb-8 mt-[-60px]">
                         <a
                             href="https://dentago.uz/dashboard"
                             className="flex items-center justify-center gap-3 w-full h-14 bg-blue-50 text-[#00BCE4] rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-[#00BCE4] hover:text-white transition-all duration-300 shadow-sm"
